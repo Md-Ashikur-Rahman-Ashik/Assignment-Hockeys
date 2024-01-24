@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-white">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,11 +28,57 @@
       .font-manrope {
         font-family: "Manrope", sans-serif;
       }
+
+      *{
+        font-family: "Manrope", sans-serif;
+      }
     </style>
   </head>
   <body class="bg-white">
     <!-- Header section -->
-    <header>
+    <header class="bg-white mt-12">
+      <!-- Navbar section -->
+      <section class="lg:mx-32 mb-12 bg-white">
+        <div class="navbar bg-white">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+              </div>
+              <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a>Item 1</a></li>
+                <li>
+                  <a>Parent</a>
+                  <ul class="p-2">
+                    <li><a>Submenu 1</a></li>
+                    <li><a>Submenu 2</a></li>
+                  </ul>
+                </li>
+                <li><a>Item 3</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-4xl font-extrabold text-[#131318]">Hockey’s</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Item 1</a></li>
+              <li>
+                <details>
+                  <summary>Parent</summary>
+                  <ul class="p-2">
+                    <li><a>Submenu 1</a></li>
+                    <li><a>Submenu 2</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn bg-white">Button</a>
+          </div>
+        </div>
+      </section>
       <!-- Slider section -->
       <div class="carousel mx-2 flex-row gap-2 lg:mx-32">
         <div id="slide1" class="carousel-item relative w-full">
@@ -148,7 +194,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-2">
           <div class="relative w-full">
             <img class="w-full brightness-50" src="Images/2.png" alt="" />
-            <div class="absolute w-full top-0 lg:top-16 text-white p-8">
+            <div class="absolute w-full -top-9 lg:top-16 text-white p-8">
               <h3 class="text-2xl font-extrabold">Junior Program</h3>
               <p class="my-2 lg:my-4">
                 Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
@@ -164,7 +210,7 @@
           </div>
           <div class="relative w-full">
             <img class="w-full brightness-50" src="Images/3.png" alt="" />
-            <div class="absolute w-full top-0 lg:top-16 text-white p-8">
+            <div class="absolute w-full -top-9 lg:top-16 text-white p-8">
               <h3 class="text-2xl font-extrabold">Teenager Program</h3>
               <p class="my-2 lg:my-4">
                 Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
@@ -181,7 +227,7 @@
           <div class="relative w-full col-span-1 lg:col-span-2">
             <img class="w-full brightness-50" src="Images/4.png" alt="" />
             <div
-              class="absolute w-full lg:w-1/2 top-0 lg:top-40 text-white p-8"
+              class="absolute w-full lg:w-1/2 -top-10 lg:top-40 text-white p-8"
             >
               <h3 class="text-xl lg:text-2xl font-extrabold">
                 Professional Program
@@ -411,7 +457,7 @@
         </div>
       </section>
       <!-- Contact section -->
-      <section class="mt-12 lg:mt-24 lg:mx-32">
+      <section class="mt-12 lg:mt-24 lg:mx-32 mb-24">
         <div class="text-center lg:mb-20 border-y-2 p-8 border-dotted">
           <h3 class="text-xl lg:text-4xl font-extrabold lg:mb-6 text-[#131318]">
             Get In Touch
@@ -420,8 +466,8 @@
             Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. . 
           </p>
         </div>
-        <div class="flex gap-6">
-          <div class="grid grid-cols-1 rounded-2xl border border-[#1313181a] p-12 gap-6 w-1/2">
+        <div class="flex flex-col lg:flex-row gap-6">
+          <div class="grid grid-cols-1 rounded-2xl border border-[#1313181a] p-12 gap-6 lg:w-1/2">
             <div class="p-8 rounded-2xl bg-[#bced6d1a]">
               <img src="Images/Group 1171275317.png" alt="">
               <p class="mt-6">Phone Number : 
@@ -441,7 +487,7 @@
               </p>
             </div>
           </div>
-          <div class="grid grid-cols-2 grid-rows-6 gap-6 w-1/2">
+          <div class="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-6 gap-6 w-full lg:w-1/2 p-4 lg:p-0 lg:justify-center">
             <div>
                 <h4 class="text-xl text-[#131318] font-bold mb-4">Your Name</h4>
                 <input class="rounded-xl p-5 bg-[#13131807] pr-16" type="text" placeholder="Enter your full name">
@@ -460,16 +506,65 @@
             </div>
             <div class="grid col-span-2 row-span-3">
               <h4 class="text-xl text-[#131318] font-bold">Message</h4>
-              <input class="rounded-xl p-5 bg-[#13131807] -mt-40" placeholder="Write your message">
+              <input class="rounded-xl p-5 bg-[#13131807] lg:-mt-40" placeholder="Write your message">
             </div>
             <div class="grid col-span-2">
               <button class="btn bg-[#FF4240] text-white border rounded-xl border-[#FF4240]">Send Message</button>
             </div>
           </div>
         </div>
+        <!-- Social Media Icons -->
+        <div class="mt-12 text-center rounded-2xl bg-[#629cf31a] py-8">
+          <h3 class="text-2xl font-extrabold text-[#131318]">Social Media</h3>
+          <div class="my-2 text-[#131318]">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f mx-8"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
       </section>
     </main>
     <!-- Footer section -->
-    <footer></footer>
+    <footer>
+      <footer class="flex flex-col lg:flex-row gap-28 p-4 lg:p-28 bg-[#131318] text-base-content">
+        <aside class="lg:w-1/2 text-center lg:text-left">
+          <h2 class="text-2xl font-extrabold text-white">Get In Touch</h2>
+          <p>Dit amet consectetur. Condimentum  adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+          <div class="flex items-center gap-2 my-4 justify-center lg:justify-start">
+            <i class="fa-solid fa-envelope text-[#FF4240]"></i>
+            <p>hockeys@support.com</p>
+          </div>
+          <div class="flex items-center gap-2 justify-center lg:justify-start">
+            <i class="fa-solid fa-phone text-[#FF4240]"></i>
+            <p>(+62) 123-321-543</p>
+          </div>
+        </aside> 
+        <div class="flex gap-10 lg:gap-32 justify-center">
+          <nav class="flex flex-col gap-2">
+            <header class="footer-title text-white">Company</header> 
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Leadership</a>
+            <a class="link link-hover">Careers</a>
+            <a class="link link-hover">News & Article</a>
+            <a class="link link-hover">Legal Notice</a>
+          </nav> 
+          <nav class="flex flex-col gap-2">
+            <header class="footer-title text-white">Support</header> 
+            <a class="link link-hover">Help Center</a>
+            <a class="link link-hover">FAQ</a>
+            <a class="link link-hover">Ticket Support</a>
+            <a class="link link-hover">Contact Us</a>
+          </nav> 
+        </div>
+        <nav class="flex flex-col gap-2 items-center lg:items-start">
+          <header class="footer-title text-white">Services</header> 
+          <a class="link link-hover">Academy</a>
+          <a class="link link-hover">Group Lesson</a>
+          <a class="link link-hover">Private Lesson</a>
+          <a class="link link-hover">Hockeys for kids</a>
+          <a class="link link-hover">Hockeys for Adult</a>
+        </nav>
+      </footer>
+    </footer>
   </body>
 </html>
